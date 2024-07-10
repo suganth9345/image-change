@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Background Image Swap</title>
+    <style>
+        body {
+            background-image: url('thumbbig-1344443.webp');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const imageSources = [
+            'wp2887992.webp','thumbbig-1344443.webp,anime-moon-landscape_23-2151645896.avif','thumbbig-1344443.webp','naruto-akatsuki-hd-wallpaper-wallpaper-preview.jpg',
+            'naruto-akatsuki-hd-wallpaper-wallpaper-preview.jpg','anime-moon-landscape_23-2151645913.avif','wp2887992.webp','uchiha-itachi-naruto-shippuuden-anbu-silhouette-wallpaper-preview.jpg',
+            'image9','image10','image1','image6','image5','wp2887992.webp','multi-colour-cerise-pink-yellow-wallpaper-walls-single-colour-background_1073248-55530.avif',''
+        ];
+
+        function changeBackgroundImage() {
+            const randomIndex = Math.floor(Math.random() * imageSources.length);
+            document.body.style.backgroundImage = `url(${imageSources[randomIndex]})`;
+        }
+
+        // Change the background image every 5 seconds (1000 milliseconds)
+        setInterval(changeBackgroundImage, 1100);
+    </script>
+</body>
+</html>
+
